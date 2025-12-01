@@ -1,0 +1,8 @@
+CREATE TABLE evidencia (
+    id_evidencia    INTEGER    PRIMARY KEY,
+    tipo_midia      TEXT (20)  NOT NULL,
+    descricao       TEXT (150),
+    caminho_arquivo TEXT (250) NOT NULL,
+    id_ocorrêcia    INTEGER    REFERENCES ocorrencia (id_ocorrência) 
+                               NOT NULL
+);

@@ -1,0 +1,9 @@
+CREATE TABLE vitima (
+    id_vitima INTEGER    PRIMARY KEY
+                         NOT NULL,
+    nome      TEXT (100) NOT NULL,
+    CPF       TEXT (14)  NOT NULL
+                         UNIQUE,
+    telefone  TEXT (15)  NOT NULL,
+    email     TEXT (50) 
+);

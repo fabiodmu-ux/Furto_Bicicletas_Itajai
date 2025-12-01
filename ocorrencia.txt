@@ -1,0 +1,7 @@
+CREATE TABLE ocorrencia (
+    id_ocorrencia       INTEGER    PRIMARY KEY,
+    data_furto          TEXT (15)  NOT NULL,
+    hora_do_furto       TEXT (6),
+    rua_bairro_do_furto TEXT (100) NOT NULL,
+    id_bicicleta        INTEGER    REFERENCES bicicleta (id_bicicleta) 
+);

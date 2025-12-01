@@ -1,0 +1,11 @@
+CREATE TABLE bicicleta (
+    id_bicicleta INTEGER   PRIMARY KEY,
+    n_de_serie   TEXT (50) UNIQUE
+                           NOT NULL,
+    marca        TEXT (50) NOT NULL,
+    modelo       TEXT (50),
+    cor          TEXT (20) NOT NULL,
+    aro          INTEGER,
+    id_vitima    INTEGER   REFERENCES vitima (id_vitima) 
+                           NOT NULL
+);

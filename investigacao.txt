@@ -1,0 +1,10 @@
+CREATE TABLE investigacao (
+    policial_responsavel TEXT (100) NOT NULL,
+    data_inicio          TEXT (100) NOT NULL,
+    data_fim             TEXT (100),
+    local_recuperacao    TEXT (200) NOT NULL,
+    id_ocorrência        INTEGER    REFERENCES ocorrencia (id_ocorrência) 
+                                    UNIQUE
+                                    NOT NULL,
+    id_policial          INTEGER    PRIMARY KEY
+);
