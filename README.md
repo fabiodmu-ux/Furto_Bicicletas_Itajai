@@ -61,5 +61,26 @@ CREATE TABLE ocorrencia (
     data_furto TEXT (15) NOT NULL,
     hora_do_furto TEXT (6),
     rua_bairro_do_furto TEXT (100) NOT NULL,
-    id_bicicleta INTEGER REFERENCES bicicleta (id_bicicleta)
+
+Comandos de Consulta (Exemplo)
+
+SQL
+-- Consultar todas as bicicletas furtadas
+
+SELECT
+    
+    b.marca,
+    b.n_de_serie,
+    v.nome AS Proprietário,
+    o.data_furto.
+
+FROM bicicleta b
+
+JOIN vitima v ON b.id_vitima = v.id_vitima
+
+JOIN ocorrencia o ON b.id_bicicleta = o.id_bicicleta
+
+ORDER BY o.data_furto DESC;
+
+id_bicicleta INTEGER REFERENCES bicicleta (id_bicicleta)
 );
